@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/bg">
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipe Maker"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+    <!-- CardView for Input -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        android:padding="16dp"
+        android:backgroundTint="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- EditText for Ingredients -->
+            <EditText
+                android:id="@+id/et_ingredients"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Enter ingredients..."
+                android:background="@null"
+                android:textSize="16sp"
+                android:padding="12dp"/>
+
+            <!-- Voice Input Button -->
+            <ImageButton
+                android:id="@+id/btn_voice_input"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/ic_mic"
+                android:contentDescription="Voice Input"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Space Between Elements -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+
+    <!-- Find Recipes Button -->
+    <Button
+        android:id="@+id/btn_find_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Recipes"
+        style="@style/CustomButton"/>
+
+</LinearLayout>
